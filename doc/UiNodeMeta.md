@@ -1,4 +1,4 @@
-# ory_kratos_client.model.SuccessfulSelfServiceSettingsWithoutBrowser
+# ory_kratos_client.model.UiNodeMeta
 
 ## Load the model package
 ```dart
@@ -8,8 +8,7 @@ import 'package:ory_kratos_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flow** | [**SelfServiceSettingsFlow**](SelfServiceSettingsFlow.md) |  | 
-**identity** | [**Identity**](Identity.md) |  | 
+**label** | [**UiText**](UiText.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

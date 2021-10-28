@@ -9,33 +9,33 @@ import 'package:ory_kratos_client/model/ui_text.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'meta.g.dart';
+part 'ui_node_meta.g.dart';
 
-abstract class Meta implements Built<Meta, MetaBuilder> {
+abstract class UiNodeMeta implements Built<UiNodeMeta, UiNodeMetaBuilder> {
 
     @nullable
     @BuiltValueField(wireName: r'label')
     UiText get label;
 
-    Meta._();
+    UiNodeMeta._();
 
-    static void _initializeBuilder(MetaBuilder b) => b;
+    static void _initializeBuilder(UiNodeMetaBuilder b) => b;
 
-    factory Meta([void updates(MetaBuilder b)]) = _$Meta;
+    factory UiNodeMeta([void updates(UiNodeMetaBuilder b)]) = _$UiNodeMeta;
 
     @BuiltValueSerializer(custom: true)
-    static Serializer<Meta> get serializer => _$MetaSerializer();
+    static Serializer<UiNodeMeta> get serializer => _$UiNodeMetaSerializer();
 }
 
-class _$MetaSerializer implements StructuredSerializer<Meta> {
+class _$UiNodeMetaSerializer implements StructuredSerializer<UiNodeMeta> {
 
     @override
-    final Iterable<Type> types = const [Meta, _$Meta];
+    final Iterable<Type> types = const [UiNodeMeta, _$UiNodeMeta];
     @override
-    final String wireName = r'Meta';
+    final String wireName = r'UiNodeMeta';
 
     @override
-    Iterable<Object> serialize(Serializers serializers, Meta object,
+    Iterable<Object> serialize(Serializers serializers, UiNodeMeta object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object>[];
         if (object.label != null) {
@@ -48,9 +48,9 @@ class _$MetaSerializer implements StructuredSerializer<Meta> {
     }
 
     @override
-    Meta deserialize(Serializers serializers, Iterable<Object> serialized,
+    UiNodeMeta deserialize(Serializers serializers, Iterable<Object> serialized,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = MetaBuilder();
+        final result = UiNodeMetaBuilder();
 
         final iterator = serialized.iterator;
         while (iterator.moveNext()) {

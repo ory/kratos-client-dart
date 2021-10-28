@@ -5,15 +5,15 @@
 
 // ignore_for_file: unused_import
 
-import 'package:ory_kratos_client/model/meta.dart';
+import 'package:ory_kratos_client/model/ui_node_meta.dart';
 import 'package:test/test.dart';
 
-// tests for Meta
+// tests for UiNodeMeta
 void main() {
-  final instance = MetaBuilder();
+  final instance = UiNodeMetaBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Meta, () {
+  group(UiNodeMeta, () {
     // UiText label
     test('to test the property `label`', () async {
       // TODO
