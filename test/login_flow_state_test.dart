@@ -1,9 +1,9 @@
 import 'package:test/test.dart';
 import 'package:ory_kratos_client/ory_kratos_client.dart';
 
-// tests for IdentityCredentialsType
+// tests for LoginFlowState
 void main() {
 
-  group(IdentityCredentialsType, () {
+  group(LoginFlowState, () {
   });
 }
