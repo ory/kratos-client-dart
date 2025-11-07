@@ -58,6 +58,9 @@ import 'package:ory_kratos_client/src/model/identity_with_credentials_oidc_confi
 import 'package:ory_kratos_client/src/model/identity_with_credentials_oidc_config_provider.dart';
 import 'package:ory_kratos_client/src/model/identity_with_credentials_password.dart';
 import 'package:ory_kratos_client/src/model/identity_with_credentials_password_config.dart';
+import 'package:ory_kratos_client/src/model/identity_with_credentials_saml.dart';
+import 'package:ory_kratos_client/src/model/identity_with_credentials_saml_config.dart';
+import 'package:ory_kratos_client/src/model/identity_with_credentials_saml_config_provider.dart';
 import 'package:ory_kratos_client/src/model/is_alive200_response.dart';
 import 'package:ory_kratos_client/src/model/is_ready503_response.dart';
 import 'package:ory_kratos_client/src/model/json_patch.dart';
@@ -95,6 +98,7 @@ import 'package:ory_kratos_client/src/model/ui_container.dart';
 import 'package:ory_kratos_client/src/model/ui_node.dart';
 import 'package:ory_kratos_client/src/model/ui_node_anchor_attributes.dart';
 import 'package:ory_kratos_client/src/model/ui_node_attributes.dart';
+import 'package:ory_kratos_client/src/model/ui_node_division_attributes.dart';
 import 'package:ory_kratos_client/src/model/ui_node_image_attributes.dart';
 import 'package:ory_kratos_client/src/model/ui_node_input_attributes.dart';
 import 'package:ory_kratos_client/src/model/ui_node_meta.dart';
@@ -110,6 +114,7 @@ import 'package:ory_kratos_client/src/model/update_login_flow_with_lookup_secret
 import 'package:ory_kratos_client/src/model/update_login_flow_with_oidc_method.dart';
 import 'package:ory_kratos_client/src/model/update_login_flow_with_passkey_method.dart';
 import 'package:ory_kratos_client/src/model/update_login_flow_with_password_method.dart';
+import 'package:ory_kratos_client/src/model/update_login_flow_with_saml_method.dart';
 import 'package:ory_kratos_client/src/model/update_login_flow_with_totp_method.dart';
 import 'package:ory_kratos_client/src/model/update_login_flow_with_web_authn_method.dart';
 import 'package:ory_kratos_client/src/model/update_recovery_flow_body.dart';
@@ -121,6 +126,7 @@ import 'package:ory_kratos_client/src/model/update_registration_flow_with_oidc_m
 import 'package:ory_kratos_client/src/model/update_registration_flow_with_passkey_method.dart';
 import 'package:ory_kratos_client/src/model/update_registration_flow_with_password_method.dart';
 import 'package:ory_kratos_client/src/model/update_registration_flow_with_profile_method.dart';
+import 'package:ory_kratos_client/src/model/update_registration_flow_with_saml_method.dart';
 import 'package:ory_kratos_client/src/model/update_registration_flow_with_web_authn_method.dart';
 import 'package:ory_kratos_client/src/model/update_settings_flow_body.dart';
 import 'package:ory_kratos_client/src/model/update_settings_flow_with_lookup_method.dart';
@@ -128,6 +134,7 @@ import 'package:ory_kratos_client/src/model/update_settings_flow_with_oidc_metho
 import 'package:ory_kratos_client/src/model/update_settings_flow_with_passkey_method.dart';
 import 'package:ory_kratos_client/src/model/update_settings_flow_with_password_method.dart';
 import 'package:ory_kratos_client/src/model/update_settings_flow_with_profile_method.dart';
+import 'package:ory_kratos_client/src/model/update_settings_flow_with_saml_method.dart';
 import 'package:ory_kratos_client/src/model/update_settings_flow_with_totp_method.dart';
 import 'package:ory_kratos_client/src/model/update_settings_flow_with_web_authn_method.dart';
 import 'package:ory_kratos_client/src/model/update_verification_flow_body.dart';
@@ -185,6 +192,9 @@ part 'serializers.g.dart';
   IdentityWithCredentialsOidcConfigProvider,
   IdentityWithCredentialsPassword,
   IdentityWithCredentialsPasswordConfig,
+  IdentityWithCredentialsSaml,
+  IdentityWithCredentialsSamlConfig,
+  IdentityWithCredentialsSamlConfigProvider,
   IsAlive200Response,
   IsReady503Response,
   JsonPatch,
@@ -222,6 +232,7 @@ part 'serializers.g.dart';
   UiNode,
   UiNodeAnchorAttributes,
   UiNodeAttributes,
+  UiNodeDivisionAttributes,
   UiNodeImageAttributes,
   UiNodeInputAttributes,
   UiNodeMeta,
@@ -237,6 +248,7 @@ part 'serializers.g.dart';
   UpdateLoginFlowWithOidcMethod,
   UpdateLoginFlowWithPasskeyMethod,
   UpdateLoginFlowWithPasswordMethod,
+  UpdateLoginFlowWithSamlMethod,
   UpdateLoginFlowWithTotpMethod,
   UpdateLoginFlowWithWebAuthnMethod,
   UpdateRecoveryFlowBody,
@@ -248,6 +260,7 @@ part 'serializers.g.dart';
   UpdateRegistrationFlowWithPasskeyMethod,
   UpdateRegistrationFlowWithPasswordMethod,
   UpdateRegistrationFlowWithProfileMethod,
+  UpdateRegistrationFlowWithSamlMethod,
   UpdateRegistrationFlowWithWebAuthnMethod,
   UpdateSettingsFlowBody,
   UpdateSettingsFlowWithLookupMethod,
@@ -255,6 +268,7 @@ part 'serializers.g.dart';
   UpdateSettingsFlowWithPasskeyMethod,
   UpdateSettingsFlowWithPasswordMethod,
   UpdateSettingsFlowWithProfileMethod,
+  UpdateSettingsFlowWithSamlMethod,
   UpdateSettingsFlowWithTotpMethod,
   UpdateSettingsFlowWithWebAuthnMethod,
   UpdateVerificationFlowBody,

@@ -19,7 +19,7 @@ part 'ui_node.g.dart';
 /// * [group] - Group specifies which group (e.g. password authenticator) this node belongs to. default DefaultGroup password PasswordGroup oidc OpenIDConnectGroup profile ProfileGroup link LinkGroup code CodeGroup totp TOTPGroup lookup_secret LookupGroup webauthn WebAuthnGroup passkey PasskeyGroup identifier_first IdentifierFirstGroup captcha CaptchaGroup saml SAMLGroup
 /// * [messages] 
 /// * [meta] 
-/// * [type] - The node's type text Text input Input img Image a Anchor script Script
+/// * [type] - The node's type text Text input Input img Image a Anchor script Script div Division
 @BuiltValue()
 abstract class UiNode implements Built<UiNode, UiNodeBuilder> {
   @BuiltValueField(wireName: r'attributes')
@@ -36,10 +36,10 @@ abstract class UiNode implements Built<UiNode, UiNodeBuilder> {
   @BuiltValueField(wireName: r'meta')
   UiNodeMeta get meta;
 
-  /// The node's type text Text input Input img Image a Anchor script Script
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
   @BuiltValueField(wireName: r'type')
   UiNodeTypeEnum get type;
-  // enum typeEnum {  text,  input,  img,  a,  script,  };
+  // enum typeEnum {  text,  input,  img,  a,  script,  div,  };
 
   UiNode._();
 
@@ -228,21 +228,24 @@ class UiNodeGroupEnum extends EnumClass {
 
 class UiNodeTypeEnum extends EnumClass {
 
-  /// The node's type text Text input Input img Image a Anchor script Script
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
   @BuiltValueEnumConst(wireName: r'text')
   static const UiNodeTypeEnum text = _$uiNodeTypeEnum_text;
-  /// The node's type text Text input Input img Image a Anchor script Script
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
   @BuiltValueEnumConst(wireName: r'input')
   static const UiNodeTypeEnum input = _$uiNodeTypeEnum_input;
-  /// The node's type text Text input Input img Image a Anchor script Script
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
   @BuiltValueEnumConst(wireName: r'img')
   static const UiNodeTypeEnum img = _$uiNodeTypeEnum_img;
-  /// The node's type text Text input Input img Image a Anchor script Script
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
   @BuiltValueEnumConst(wireName: r'a')
   static const UiNodeTypeEnum a = _$uiNodeTypeEnum_a;
-  /// The node's type text Text input Input img Image a Anchor script Script
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
   @BuiltValueEnumConst(wireName: r'script')
   static const UiNodeTypeEnum script = _$uiNodeTypeEnum_script;
+  /// The node's type text Text input Input img Image a Anchor script Script div Division
+  @BuiltValueEnumConst(wireName: r'div')
+  static const UiNodeTypeEnum div = _$uiNodeTypeEnum_div;
 
   static Serializer<UiNodeTypeEnum> get serializer => _$uiNodeTypeEnumSerializer;
 

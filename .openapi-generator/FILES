@@ -49,6 +49,9 @@ doc/IdentityWithCredentialsOidcConfig.md
 doc/IdentityWithCredentialsOidcConfigProvider.md
 doc/IdentityWithCredentialsPassword.md
 doc/IdentityWithCredentialsPasswordConfig.md
+doc/IdentityWithCredentialsSaml.md
+doc/IdentityWithCredentialsSamlConfig.md
+doc/IdentityWithCredentialsSamlConfigProvider.md
 doc/IsAlive200Response.md
 doc/IsReady503Response.md
 doc/JsonPatch.md
@@ -87,6 +90,7 @@ doc/UiContainer.md
 doc/UiNode.md
 doc/UiNodeAnchorAttributes.md
 doc/UiNodeAttributes.md
+doc/UiNodeDivisionAttributes.md
 doc/UiNodeImageAttributes.md
 doc/UiNodeInputAttributes.md
 doc/UiNodeMeta.md
@@ -102,6 +106,7 @@ doc/UpdateLoginFlowWithLookupSecretMethod.md
 doc/UpdateLoginFlowWithOidcMethod.md
 doc/UpdateLoginFlowWithPasskeyMethod.md
 doc/UpdateLoginFlowWithPasswordMethod.md
+doc/UpdateLoginFlowWithSamlMethod.md
 doc/UpdateLoginFlowWithTotpMethod.md
 doc/UpdateLoginFlowWithWebAuthnMethod.md
 doc/UpdateRecoveryFlowBody.md
@@ -113,6 +118,7 @@ doc/UpdateRegistrationFlowWithOidcMethod.md
 doc/UpdateRegistrationFlowWithPasskeyMethod.md
 doc/UpdateRegistrationFlowWithPasswordMethod.md
 doc/UpdateRegistrationFlowWithProfileMethod.md
+doc/UpdateRegistrationFlowWithSamlMethod.md
 doc/UpdateRegistrationFlowWithWebAuthnMethod.md
 doc/UpdateSettingsFlowBody.md
 doc/UpdateSettingsFlowWithLookupMethod.md
@@ -120,6 +126,7 @@ doc/UpdateSettingsFlowWithOidcMethod.md
 doc/UpdateSettingsFlowWithPasskeyMethod.md
 doc/UpdateSettingsFlowWithPasswordMethod.md
 doc/UpdateSettingsFlowWithProfileMethod.md
+doc/UpdateSettingsFlowWithSamlMethod.md
 doc/UpdateSettingsFlowWithTotpMethod.md
 doc/UpdateSettingsFlowWithWebAuthnMethod.md
 doc/UpdateVerificationFlowBody.md
@@ -187,6 +194,9 @@ lib/src/model/identity_with_credentials_oidc_config.dart
 lib/src/model/identity_with_credentials_oidc_config_provider.dart
 lib/src/model/identity_with_credentials_password.dart
 lib/src/model/identity_with_credentials_password_config.dart
+lib/src/model/identity_with_credentials_saml.dart
+lib/src/model/identity_with_credentials_saml_config.dart
+lib/src/model/identity_with_credentials_saml_config_provider.dart
 lib/src/model/is_alive200_response.dart
 lib/src/model/is_ready503_response.dart
 lib/src/model/json_patch.dart
@@ -224,6 +234,7 @@ lib/src/model/ui_container.dart
 lib/src/model/ui_node.dart
 lib/src/model/ui_node_anchor_attributes.dart
 lib/src/model/ui_node_attributes.dart
+lib/src/model/ui_node_division_attributes.dart
 lib/src/model/ui_node_image_attributes.dart
 lib/src/model/ui_node_input_attributes.dart
 lib/src/model/ui_node_meta.dart
@@ -239,6 +250,7 @@ lib/src/model/update_login_flow_with_lookup_secret_method.dart
 lib/src/model/update_login_flow_with_oidc_method.dart
 lib/src/model/update_login_flow_with_passkey_method.dart
 lib/src/model/update_login_flow_with_password_method.dart
+lib/src/model/update_login_flow_with_saml_method.dart
 lib/src/model/update_login_flow_with_totp_method.dart
 lib/src/model/update_login_flow_with_web_authn_method.dart
 lib/src/model/update_recovery_flow_body.dart
@@ -250,6 +262,7 @@ lib/src/model/update_registration_flow_with_oidc_method.dart
 lib/src/model/update_registration_flow_with_passkey_method.dart
 lib/src/model/update_registration_flow_with_password_method.dart
 lib/src/model/update_registration_flow_with_profile_method.dart
+lib/src/model/update_registration_flow_with_saml_method.dart
 lib/src/model/update_registration_flow_with_web_authn_method.dart
 lib/src/model/update_settings_flow_body.dart
 lib/src/model/update_settings_flow_with_lookup_method.dart
@@ -257,6 +270,7 @@ lib/src/model/update_settings_flow_with_oidc_method.dart
 lib/src/model/update_settings_flow_with_passkey_method.dart
 lib/src/model/update_settings_flow_with_password_method.dart
 lib/src/model/update_settings_flow_with_profile_method.dart
+lib/src/model/update_settings_flow_with_saml_method.dart
 lib/src/model/update_settings_flow_with_totp_method.dart
 lib/src/model/update_settings_flow_with_web_authn_method.dart
 lib/src/model/update_verification_flow_body.dart
@@ -314,6 +328,9 @@ test/identity_with_credentials_oidc_config_test.dart
 test/identity_with_credentials_oidc_test.dart
 test/identity_with_credentials_password_config_test.dart
 test/identity_with_credentials_password_test.dart
+test/identity_with_credentials_saml_config_provider_test.dart
+test/identity_with_credentials_saml_config_test.dart
+test/identity_with_credentials_saml_test.dart
 test/identity_with_credentials_test.dart
 test/is_alive200_response_test.dart
 test/is_ready503_response_test.dart
@@ -352,6 +369,7 @@ test/token_pagination_test.dart
 test/ui_container_test.dart
 test/ui_node_anchor_attributes_test.dart
 test/ui_node_attributes_test.dart
+test/ui_node_division_attributes_test.dart
 test/ui_node_image_attributes_test.dart
 test/ui_node_input_attributes_test.dart
 test/ui_node_meta_test.dart
@@ -368,6 +386,7 @@ test/update_login_flow_with_lookup_secret_method_test.dart
 test/update_login_flow_with_oidc_method_test.dart
 test/update_login_flow_with_passkey_method_test.dart
 test/update_login_flow_with_password_method_test.dart
+test/update_login_flow_with_saml_method_test.dart
 test/update_login_flow_with_totp_method_test.dart
 test/update_login_flow_with_web_authn_method_test.dart
 test/update_recovery_flow_body_test.dart
@@ -379,6 +398,7 @@ test/update_registration_flow_with_oidc_method_test.dart
 test/update_registration_flow_with_passkey_method_test.dart
 test/update_registration_flow_with_password_method_test.dart
 test/update_registration_flow_with_profile_method_test.dart
+test/update_registration_flow_with_saml_method_test.dart
 test/update_registration_flow_with_web_authn_method_test.dart
 test/update_settings_flow_body_test.dart
 test/update_settings_flow_with_lookup_method_test.dart
@@ -386,6 +406,7 @@ test/update_settings_flow_with_oidc_method_test.dart
 test/update_settings_flow_with_passkey_method_test.dart
 test/update_settings_flow_with_password_method_test.dart
 test/update_settings_flow_with_profile_method_test.dart
+test/update_settings_flow_with_saml_method_test.dart
 test/update_settings_flow_with_totp_method_test.dart
 test/update_settings_flow_with_web_authn_method_test.dart
 test/update_verification_flow_body_test.dart

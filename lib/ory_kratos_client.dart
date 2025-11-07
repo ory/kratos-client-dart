@@ -59,6 +59,9 @@ export 'package:ory_kratos_client/src/model/identity_with_credentials_oidc_confi
 export 'package:ory_kratos_client/src/model/identity_with_credentials_oidc_config_provider.dart';
 export 'package:ory_kratos_client/src/model/identity_with_credentials_password.dart';
 export 'package:ory_kratos_client/src/model/identity_with_credentials_password_config.dart';
+export 'package:ory_kratos_client/src/model/identity_with_credentials_saml.dart';
+export 'package:ory_kratos_client/src/model/identity_with_credentials_saml_config.dart';
+export 'package:ory_kratos_client/src/model/identity_with_credentials_saml_config_provider.dart';
 export 'package:ory_kratos_client/src/model/is_alive200_response.dart';
 export 'package:ory_kratos_client/src/model/is_ready503_response.dart';
 export 'package:ory_kratos_client/src/model/json_patch.dart';
@@ -96,6 +99,7 @@ export 'package:ory_kratos_client/src/model/ui_container.dart';
 export 'package:ory_kratos_client/src/model/ui_node.dart';
 export 'package:ory_kratos_client/src/model/ui_node_anchor_attributes.dart';
 export 'package:ory_kratos_client/src/model/ui_node_attributes.dart';
+export 'package:ory_kratos_client/src/model/ui_node_division_attributes.dart';
 export 'package:ory_kratos_client/src/model/ui_node_image_attributes.dart';
 export 'package:ory_kratos_client/src/model/ui_node_input_attributes.dart';
 export 'package:ory_kratos_client/src/model/ui_node_meta.dart';
@@ -111,6 +115,7 @@ export 'package:ory_kratos_client/src/model/update_login_flow_with_lookup_secret
 export 'package:ory_kratos_client/src/model/update_login_flow_with_oidc_method.dart';
 export 'package:ory_kratos_client/src/model/update_login_flow_with_passkey_method.dart';
 export 'package:ory_kratos_client/src/model/update_login_flow_with_password_method.dart';
+export 'package:ory_kratos_client/src/model/update_login_flow_with_saml_method.dart';
 export 'package:ory_kratos_client/src/model/update_login_flow_with_totp_method.dart';
 export 'package:ory_kratos_client/src/model/update_login_flow_with_web_authn_method.dart';
 export 'package:ory_kratos_client/src/model/update_recovery_flow_body.dart';
@@ -122,6 +127,7 @@ export 'package:ory_kratos_client/src/model/update_registration_flow_with_oidc_m
 export 'package:ory_kratos_client/src/model/update_registration_flow_with_passkey_method.dart';
 export 'package:ory_kratos_client/src/model/update_registration_flow_with_password_method.dart';
 export 'package:ory_kratos_client/src/model/update_registration_flow_with_profile_method.dart';
+export 'package:ory_kratos_client/src/model/update_registration_flow_with_saml_method.dart';
 export 'package:ory_kratos_client/src/model/update_registration_flow_with_web_authn_method.dart';
 export 'package:ory_kratos_client/src/model/update_settings_flow_body.dart';
 export 'package:ory_kratos_client/src/model/update_settings_flow_with_lookup_method.dart';
@@ -129,6 +135,7 @@ export 'package:ory_kratos_client/src/model/update_settings_flow_with_oidc_metho
 export 'package:ory_kratos_client/src/model/update_settings_flow_with_passkey_method.dart';
 export 'package:ory_kratos_client/src/model/update_settings_flow_with_password_method.dart';
 export 'package:ory_kratos_client/src/model/update_settings_flow_with_profile_method.dart';
+export 'package:ory_kratos_client/src/model/update_settings_flow_with_saml_method.dart';
 export 'package:ory_kratos_client/src/model/update_settings_flow_with_totp_method.dart';
 export 'package:ory_kratos_client/src/model/update_settings_flow_with_web_authn_method.dart';
 export 'package:ory_kratos_client/src/model/update_verification_flow_body.dart';
